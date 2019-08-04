@@ -39,14 +39,35 @@
 <main role="main" class="flex-shrink-0">
     <div class="container">
          <h1 class="mt-5 text-center">HMM-based Speech Synthesis System incorporated with Language Identification for Low-resourced Languages</h1>
-    <p class="border border-danger lead text-center mt-5">To be uploaded once the paper has been accepted</p>
-    </div> <!--.container -->
+    <p class="border border-danger lead text-center mt-5">To be uploaded once the paper has been presented</p>
+
+    <form class="form-group" id="demo" method="GET">
+<!--<p>Avoid code-mixing of different languages to produce good results. Auto-detect works for Sepedi, Xitsonga and Tshivenda.</p>-->
+
+<!--<div class="row"><label class="col-xs-12" for="LOCALE">Language:</label>-->
+
+<div class="col-xs-12 "><select class="form-control" id="LOCALE" name="LOCALE"><option value="detect">Select language</option><option value="nso">Sepedi (female)</option><option value="tso">Xitsonga (male)</option><option value="nbl">IsiNdebele (male)</option><option value="ven">Tshivenda (female)</option></select></div>
+
+<!--<div class="col-xs-12 col-md-4"><select class="form-control" id="effects" name="effects"><option selected="selected" value="">Effects</option><option value="r">Robot</option><option value="w">Whisper</option><option value="s">Stadium</option><option value="c">Chorus</option><option value="j">JetPilot</option></select></div>-->
+<!--</div>-->
+<!-- .panel-body-->
+        <!--<label for="INPUT_TEXT">Text:</label>-->
+    <textarea class="form-control mt-1" data-minlength="2" id="INPUT_TEXT" name="INPUT_TEXT" placeholder="Enter your text" required="required" rows="5" spellcheck="false"></textarea><div class="font-weight-bold" id="txtHint" style="font-weight: 700"> </div>
+
+<div id="audioDestination"> </div>
+
+<div class="btn-group"><button class="btn btn-outline-danger mt-1" id="SPEAK" name="act" type="submit" value="SPEAK">Play</button></div>
+<br />
+        <a href="https://za.linkedin.com/in/josephsefara/" target="_blank">Developed by Tshephisho Joseph Sefara</a>
+    </form>
+<sup><b>Terms of Service</b> - This demo is for evaluation purpose only; commercial use is strictly forbidden. No static audio files may be distributed. </sup>
+    </div><!--.container -->
 </main>
  <!-- Footer -->
 <footer class="page-footer font-small blue">
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright
+  <div class="footer-copyright text-center py-3">© <script>document.write(new Date().getFullYear())</script> Copyright
     <!--<a href="#">.com</a>-->
   </div>
   <!-- Copyright -->
@@ -55,5 +76,31 @@
 <!-- Footer -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script>
+!function(){
+
+  jQuery( "#demo" ).on( "submit", function( event ) {
+
+    event.preventDefault();
+    var l = jQuery(this).serialize();
+    var url = '//speechtech.co.za/alltts/play.php?'+l+'&act='+document.activeElement.value;
+    var audio = new Audio(url);
+    audio.play();
+    console.log( );
+  //  console.log( jQuery(this));
+  //  var sound = document.createElement('audio');
+  //  sound.controls = 'controls';
+  //  sound.type = "audio/x-wav";
+  //  sound.autoplay="autoplay";
+  //  sound.src = url;
+  //  var a = document.getElementById('audioDestination');
+  //  while (a.childNodes.length > 0) {
+  //     a.removeChild(a.firstChild);
+  //  }
+  //  a.appendChild(sound);
+
+  });
+}();
+</script>
 </body>
 </html>
