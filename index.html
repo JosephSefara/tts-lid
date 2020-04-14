@@ -50,7 +50,7 @@
 
 <!--<div class="row"><label class="col-xs-12" for="LOCALE">Language:</label>-->
 
-<div class="col-xs-12 "><select class="form-control" id="LOCALE" name="LOCALE">
+<div class="col-xs-12 "><select class="form-control" id="LOCALE" name="LOCALE" title="Select the language">
     <option value="">Select language</option>
     <option value="nso">Sepedi (female)</option>
     <option value="tso">Xitsonga (male)</option><option value="nbl">IsiNdebele (male)</option>
@@ -62,7 +62,7 @@
 <!--</div>-->
 <!-- .panel-body-->
         <!--<label for="INPUT_TEXT">Text:</label>-->
- <textarea class="form-control mt-1" data-minlength="2" id="INPUT_TEXT" name="INPUT_TEXT" placeholder="Enter your text" required="required" rows="5" spellcheck="false"></textarea>
+ <textarea class="form-control mt-1" data-minlength="2" id="INPUT_TEXT" name="INPUT_TEXT" placeholder="Enter your text" required="required" rows="5" spellcheck="false" title="Enter your text"></textarea>
         
  <div class="font-weight-bold" id="txtHint" style="font-weight: 700"> </div>
 
@@ -89,7 +89,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script>
-    let copyright = '<p>'+(new Date().getFullYear()).toString()+ ' ©  Copyright </p>';
+    let copyright = '<p> © Copyright ' + (new Date().getFullYear()).toString()+' </p>';
     $('.footer-copyright').html(copyright);
 </script>
     
