@@ -3,4 +3,4 @@
 Submitted to [IEEE 2019 International Conference on Advances in Big Data, Computing and Data Communication Systems (icABCD)
 ](http://icabcd.org/2019/)
 
-# Visit home page [here](https://sefaratj.github.io/tts-lid/)
+# Visit home page [here](https://josephsefara.github.io/tts-lid/)
