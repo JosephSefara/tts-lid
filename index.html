@@ -113,31 +113,31 @@
            }
         });
     })
-    $('#INPUT_TEXT').on('keyup', function () {
-        let link = "//apps.speechtech.co.za/alltts/classify.php";
-        let t = $(this).val();
-        let data = {
-            'text': t,
-            'model': 'namesModel'
-        }
-        if (t.length > 2) {
-            $.ajax({
-                type: 'GET',
-                crossDomain: true,
-                url: link,
-                data: data,
-                success: function (data) {
-                    $('#LOCALE').val(data);
-                    if (data.length > 2 && data.length < 6) {
-                        $('#txtHint').html('<p class="mt-3">Detected Language: <b>' + lang[data] + '</b></p>');
-                        $('#LOCALE').val(data);
-                    } else {
-                        $('#txtHint').empty();
-                    }
-                }
-            });
-        }
-    });
+//     $('#INPUT_TEXT').on('keyup', function () {
+//         let link = "//apps.speechtech.co.za/alltts/classify.php";
+//         let t = $(this).val();
+//         let data = {
+//             'text': t,
+//             'model': 'namesModel'
+//         }
+//         if (t.length > 2) {
+//             $.ajax({
+//                 type: 'GET',
+//                 crossDomain: true,
+//                 url: link,
+//                 data: data,
+//                 success: function (data) {
+//                     $('#LOCALE').val(data);
+//                     if (data.length > 2 && data.length < 6) {
+//                         $('#txtHint').html('<p class="mt-3">Detected Language: <b>' + lang[data] + '</b></p>');
+//                         $('#LOCALE').val(data);
+//                     } else {
+//                         $('#txtHint').empty();
+//                     }
+//                 }
+//             });
+//         }
+//     });
 </script>
 </body>
 </html>
