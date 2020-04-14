@@ -4,140 +4,149 @@
     <meta charset="UTF-8">
     <title>HMM-based Speech Synthesis System incorporated with Language Identification for Low-resourced Languages</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous">
     <style>
         main > .container {padding: 60px 15px 0;}
     </style>
-    
-    </head>
+
+</head>
 <body class="d-flex flex-column h-100">
- <header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#"><img src="https://speechtech.co.za/logo.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Paper</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Data</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Gallery</a>
-        </li>
-      </ul>
-      <!--<form class="form-inline mt-2 mt-md-0">-->
-        <!--<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
-        <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-      <!--</form>-->
-    </div>
-  </nav>
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark container">
+        <a class="navbar-brand" href="#"><img src="https://speechtech.co.za/logo.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+<!--                    <div class="dropdown">-->
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Paper
+                        </a>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="//researchspace.csir.co.za/dspace/handle/10204/11218" target="_blank">View from CSIR</a>
+                            <a class="dropdown-item" href="//ieeexplore.ieee.org/document/8851055" target="_blank">View from IEEE</a>
+                            <a class="dropdown-item" target="_blank" href="//www.researchgate.net/publication/336141229_HMM-based_Speech_Synthesis_System_incorporated_with_Language_Identification_for_Low-resourced_Languages">View from ResearchGate</a>
+                        </div>
+<!--                    </div>-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Gallery</a>
+                </li>
+            </ul>
+            <!--<form class="form-inline mt-2 mt-md-0">-->
+            <!--<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
+            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+            <!--</form>-->
+        </div>
+    </nav>
 </header>
 <main role="main" class="flex-shrink-0">
-    <div class="container">
-         <h1 class="mt-5 text-center">HMM-based Speech Synthesis System incorporated with Language Identification for Low-resourced Languages</h1>
-        <p class="mt-2 text-center text-success">Submitted to IEEE 2019 International Conference on Advances in Big Data, Computing and Data Communication Systems (icABCD)</p>
+    <div class="container" style="background-color: antiquewhite">
+        <h1 class="mt-5 text-center">HMM-based Speech Synthesis System incorporated with Language Identification for Low-resourced Languages</h1>
+        <p class="mt-2 text-center text-success">Published to IEEE 2019 International Conference on Advances in Big Data, Computing and Data Communication Systems (icABCD)</p>
         <p class="mt-2 text-center"> <a  href="//bit.ly/2kvtCd3"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"></a> </p>
         <p class="mt-2 text-center text-success" >Support the development.</p>
         <p class="border border-danger lead text-center mt-5">LID to be uploaded</p>
 
-    <form class="form-group" id="demo" method="GET">
-<!--<p>Avoid code-mixing of different languages to produce good results. Auto-detect works for Sepedi, Xitsonga and Tshivenda.</p>-->
+        <form class="form-group" id="demo" method="GET">
+            <!--<p>Avoid code-mixing of different languages to produce good results. Auto-detect works for Sepedi, Xitsonga and Tshivenda.</p>-->
 
-<!--<div class="row"><label class="col-xs-12" for="LOCALE">Language:</label>-->
+            <!--<div class="row"><label class="col-xs-12" for="LOCALE">Language:</label>-->
 
-<div class="col-xs-12 "><select class="form-control" id="LOCALE" name="LOCALE" title="Select the language">
-    <option value="">Select language</option>
-    <option value="nso">Sepedi (female)</option>
-    <option value="tso">Xitsonga (male)</option><option value="nbl">IsiNdebele (male)</option>
-    <option value="ven">Tshivenda (female)</option>
-    </select>
-</div>
+            <div class="col-xs-12 "><select class="form-control" id="LOCALE" name="LOCALE" title="Select the language">
+                <option value="">Select language</option>
+                <option value="nso">Sepedi (female)</option>
+                <option value="tso">Xitsonga (male)</option><option value="nbl">IsiNdebele (male)</option>
+                <option value="ven">Tshivenda (female)</option>
+            </select>
+            </div>
 
-<!--<div class="col-xs-12 col-md-4"><select class="form-control" id="effects" name="effects"><option selected="selected" value="">Effects</option><option value="r">Robot</option><option value="w">Whisper</option><option value="s">Stadium</option><option value="c">Chorus</option><option value="j">JetPilot</option></select></div>-->
-<!--</div>-->
-<!-- .panel-body-->
-        <!--<label for="INPUT_TEXT">Text:</label>-->
- <textarea class="form-control mt-1" data-minlength="2" id="INPUT_TEXT" name="INPUT_TEXT" placeholder="Enter your text" required="required" rows="5" spellcheck="false" title="Enter your text"></textarea>
-        
- <div class="font-weight-bold" id="txtHint" style="font-weight: 700"> </div>
+            <!--<div class="col-xs-12 col-md-4"><select class="form-control" id="effects" name="effects"><option selected="selected" value="">Effects</option><option value="r">Robot</option><option value="w">Whisper</option><option value="s">Stadium</option><option value="c">Chorus</option><option value="j">JetPilot</option></select></div>-->
+            <!--</div>-->
+            <!-- .panel-body-->
+            <!--<label for="INPUT_TEXT">Text:</label>-->
+            <textarea class="form-control mt-1" data-minlength="2" id="INPUT_TEXT" name="INPUT_TEXT" placeholder="Enter your text" required="required" rows="5" spellcheck="false" title="Enter your text"></textarea>
 
-<div id="audioDestination"> </div>
-<button class="btn btn-outline-danger mt-2" id="play" name="play" type="submit" value="Play">Play</button>
+            <div class="font-weight-bold" id="txtHint" style="font-weight: 700"> </div>
 
-<br />
-<a href="https://za.linkedin.com/in/josephsefara/" target="_blank">Developed by Tshephisho Joseph Sefara</a>
-</form>
-<sup><b>Terms of Service</b> - This demo is for evaluation purpose only; commercial use is strictly forbidden. No static audio files may be distributed. </sup>
+            <div id="audioDestination"> </div>
+            <button class="btn btn-outline-danger mt-2" id="play" name="play" type="submit" value="Play">Play</button>
+
+            <br />
+            <a href="https://za.linkedin.com/in/josephsefara/" target="_blank">Developed by Tshephisho Joseph Sefara</a>
+        </form>
+        <sup><b>Terms of Service</b> - This demo is for evaluation purpose only; commercial use is strictly forbidden. No static audio files may be distributed. </sup>
     </div><!--.container -->
 </main>
- <!-- Footer -->
+<!-- Footer -->
 <footer class="page-footer font-small blue">
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">
-    <!--<a href="#">.com</a>-->
-  </div>
-  <!-- Copyright -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        <!--<a href="#">.com</a>-->
+    </div>
+    <!-- Copyright -->
 
 </footer>
 <!-- Footer -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script>
     let copyright = '<p> © Copyright ' + (new Date().getFullYear()).toString()+' </p>';
     $('.footer-copyright').html(copyright);
 </script>
-    
+
 <script>
-  let lang = {
-    'nso': 'Sepdedi',
-    'ven': 'Tshivenda',
-    'tso': 'Xitsonga',
-    'nbl': 'IsiNdebele',
-    'en_ZA': 'English'
+    let lang = {
+        'nso': 'Sepdedi',
+        'ven': 'Tshivenda',
+        'tso': 'Xitsonga',
+        'nbl': 'IsiNdebele',
+        'en_ZA': 'English'
     }
     $('#demo').on('submit', function (e) {
         e.preventDefault();
         $.ajax({
-           type: 'POST',
-           url: "//apps.speechtech.co.za/alltts/play.php",
-           data: $( this ).serialize(),
-           success: function(data){
-               $('#audioDestination').html('<audio controls id="player"><source src="data:audio/wav;base64,'+data+'" type="audio/x-wav">Your browser does not support the audio element.</audio>');
-               $('#player').play();
-           }
+            type: 'POST',
+            url: "//apps.speechtech.co.za/alltts/play.php",
+            data: $( this ).serialize(),
+            success: function(data){
+                $('#audioDestination').html('<audio controls id="player"><source src="data:audio/wav;base64,'+data+'" type="audio/x-wav">Your browser does not support the audio element.</audio>');
+                $('#player').play();
+            }
         });
     })
-//     $('#INPUT_TEXT').on('keyup', function () {
-//         let link = "//apps.speechtech.co.za/alltts/classify.php";
-//         let t = $(this).val();
-//         let data = {
-//             'text': t,
-//             'model': 'namesModel'
-//         }
-//         if (t.length > 2) {
-//             $.ajax({
-//                 type: 'GET',
-//                 crossDomain: true,
-//                 url: link,
-//                 data: data,
-//                 success: function (data) {
-//                     $('#LOCALE').val(data);
-//                     if (data.length > 2 && data.length < 6) {
-//                         $('#txtHint').html('<p class="mt-3">Detected Language: <b>' + lang[data] + '</b></p>');
-//                         $('#LOCALE').val(data);
-//                     } else {
-//                         $('#txtHint').empty();
-//                     }
-//                 }
-//             });
-//         }
-//     });
+    //     $('#INPUT_TEXT').on('keyup', function () {
+    //         let link = "//apps.speechtech.co.za/alltts/classify.php";
+    //         let t = $(this).val();
+    //         let data = {
+    //             'text': t,
+    //             'model': 'namesModel'
+    //         }
+    //         if (t.length > 2) {
+    //             $.ajax({
+    //                 type: 'GET',
+    //                 crossDomain: true,
+    //                 url: link,
+    //                 data: data,
+    //                 success: function (data) {
+    //                     $('#LOCALE').val(data);
+    //                     if (data.length > 2 && data.length < 6) {
+    //                         $('#txtHint').html('<p class="mt-3">Detected Language: <b>' + lang[data] + '</b></p>');
+    //                         $('#LOCALE').val(data);
+    //                     } else {
+    //                         $('#txtHint').empty();
+    //                     }
+    //                 }
+    //             });
+    //         }
+    //     });
 </script>
 </body>
 </html>
